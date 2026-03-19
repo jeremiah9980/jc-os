@@ -1,0 +1,26 @@
+{
+  "issues": [
+    {
+      "key": "TM-2143",
+      "fields": {
+        "summary": "Validate Keyfactor renewal handling for edge-case certs",
+        "status": {"name": "In Progress"},
+        "priority": {"name": "High"},
+        "duedate": "2026-03-19",
+        "description": "Review current renewal workflow and document any failures.",
+        "labels": ["certificates", "automation"]
+      }
+    },
+    {
+      "key": "TM-2190",
+      "fields": {
+        "summary": "Refine Terraform module for Windows server provisioning",
+        "status": {"name": "To Do"},
+        "priority": {"name": "Medium"},
+        "duedate": "2026-03-22",
+        "description": "Align module variables and output structure with platform standards.",
+        "labels": ["terraform", "windows"]
+      }
+    }
+  ]
+}

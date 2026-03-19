@@ -1,0 +1,53 @@
+[
+  {
+    "id": "MANUAL-6324d790",
+    "source": "manual",
+    "category": "work",
+    "title": "Need to create follow-up Jira ticket for Keyfactor edge case after validation.",
+    "details": "Need to create follow-up Jira ticket for Keyfactor edge case after validation.",
+    "status": "new",
+    "priority": "medium",
+    "due_date": "",
+    "next_action": "Need to create follow-up Jira ticket for Keyfactor edge case after validation.",
+    "owner": "Jeremiah",
+    "tags": [
+      "capture"
+    ],
+    "linked_item": "",
+    "notes": "Generated from capture inbox"
+  },
+  {
+    "id": "MANUAL-5bbe1956",
+    "source": "manual",
+    "category": "family",
+    "title": "Ask coach about weekend arrival time.",
+    "details": "Ask coach about weekend arrival time.",
+    "status": "new",
+    "priority": "medium",
+    "due_date": "",
+    "next_action": "Ask coach about weekend arrival time.",
+    "owner": "Jeremiah",
+    "tags": [
+      "capture"
+    ],
+    "linked_item": "",
+    "notes": "Generated from capture inbox"
+  },
+  {
+    "id": "MANUAL-5b16028d",
+    "source": "manual",
+    "category": "legal",
+    "title": "Add new legal timeline event from latest message batch.",
+    "details": "Add new legal timeline event from latest message batch.",
+    "status": "new",
+    "priority": "medium",
+    "due_date": "",
+    "next_action": "Add new legal timeline event from latest message batch.",
+    "owner": "Jeremiah",
+    "tags": [
+      "capture"
+    ],
+    "linked_item": "",
+    "notes": "Generated from capture inbox"
+  }
+]

@@ -1,0 +1,132 @@
+[
+  {
+    "id": "GMAIL-002",
+    "source": "gmail",
+    "category": "legal",
+    "title": "Review counsel email",
+    "details": "Read attached message and capture any deadlines",
+    "status": "new",
+    "priority": "critical",
+    "due_date": "2026-03-18",
+    "next_action": "Summarize legal action items",
+    "owner": "Jeremiah",
+    "tags": [
+      "legal",
+      "email"
+    ],
+    "linked_item": "",
+    "notes": "",
+    "score": 19
+  },
+  {
+    "id": "GMAIL-001",
+    "source": "gmail",
+    "category": "family",
+    "title": "Respond to Austin ISD email",
+    "details": "Review email thread and reply with requested confirmation",
+    "status": "new",
+    "priority": "high",
+    "due_date": "2026-03-18",
+    "next_action": "Draft and send response",
+    "owner": "Jeremiah",
+    "tags": [
+      "school",
+      "email"
+    ],
+    "linked_item": "",
+    "notes": "",
+    "score": 16
+  },
+  {
+    "id": "MANUAL-5bbe1956",
+    "source": "manual",
+    "category": "family",
+    "title": "Ask coach about weekend arrival time.",
+    "details": "Ask coach about weekend arrival time.",
+    "status": "new",
+    "priority": "medium",
+    "due_date": "",
+    "next_action": "Ask coach about weekend arrival time.",
+    "owner": "Jeremiah",
+    "tags": [
+      "capture"
+    ],
+    "linked_item": "",
+    "notes": "Generated from capture inbox",
+    "score": 13
+  },
+  {
+    "id": "MANUAL-5b16028d",
+    "source": "manual",
+    "category": "legal",
+    "title": "Add new legal timeline event from latest message batch.",
+    "details": "Add new legal timeline event from latest message batch.",
+    "status": "new",
+    "priority": "medium",
+    "due_date": "",
+    "next_action": "Add new legal timeline event from latest message batch.",
+    "owner": "Jeremiah",
+    "tags": [
+      "capture"
+    ],
+    "linked_item": "",
+    "notes": "Generated from capture inbox",
+    "score": 13
+  },
+  {
+    "id": "TM-2143",
+    "source": "jira",
+    "category": "work",
+    "title": "Validate Keyfactor renewal handling for edge-case certs",
+    "details": "Review current renewal workflow and document any failures.",
+    "status": "active",
+    "priority": "high",
+    "due_date": "2026-03-19",
+    "next_action": "Review and advance TM-2143",
+    "owner": "Jeremiah",
+    "tags": [
+      "certificates",
+      "automation"
+    ],
+    "linked_item": "TM-2143",
+    "notes": "In Progress",
+    "score": 11
+  },
+  {
+    "id": "TM-2190",
+    "source": "jira",
+    "category": "work",
+    "title": "Refine Terraform module for Windows server provisioning",
+    "details": "Align module variables and output structure with platform standards.",
+    "status": "new",
+    "priority": "medium",
+    "due_date": "2026-03-22",
+    "next_action": "Review and advance TM-2190",
+    "owner": "Jeremiah",
+    "tags": [
+      "terraform",
+      "windows"
+    ],
+    "linked_item": "TM-2190",
+    "notes": "To Do",
+    "score": 8
+  },
+  {
+    "id": "MANUAL-6324d790",
+    "source": "manual",
+    "category": "work",
+    "title": "Need to create follow-up Jira ticket for Keyfactor edge case after validation.",
+    "details": "Need to create follow-up Jira ticket for Keyfactor edge case after validation.",
+    "status": "new",
+    "priority": "medium",
+    "due_date": "",
+    "next_action": "Need to create follow-up Jira ticket for Keyfactor edge case after validation.",
+    "owner": "Jeremiah",
+    "tags": [
+      "capture"
+    ],
+    "linked_item": "",
+    "notes": "Generated from capture inbox",
+    "score": 5
+  }
+]
