@@ -5,58 +5,125 @@
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <title>JC-OS Unified Dashboard</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 24px; background: #f5f7fb; color: #222; }
-    h1, h2 { margin-bottom: 8px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; }
-    .panel { background: white; padding: 16px; border-radius: 14px; box-shadow: 0 2px 10px rgba(0,0,0,.08); }
-    .card { border: 1px solid #e5e7eb; padding: 12px; border-radius: 10px; margin: 10px 0; background: #fff; }
-    .muted { color: #666; font-size: 0.95rem; }
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#0b1020,#0f1830);color:#eef4ff;line-height:1.55}
+    .container{max-width:1180px;margin:auto;padding:0 20px}
+    .hero{background:#16213c;padding:30px 0;border-bottom:1px solid #30446f}
+    .eyebrow{margin:0 0 8px;color:#6ee7b7;text-transform:uppercase;letter-spacing:.12em;font-size:.82rem}
+    .lead{color:#bfd0f0;max-width:860px}
+    .nav{margin-top:16px;display:flex;flex-wrap:wrap;gap:18px}
+    .nav a{color:#9ec5ff;text-decoration:none}
+    .nav a:hover{color:#6ee7b7}
+    .layout{padding:24px 0 40px}
+    .panel{background:rgba(19,27,50,.95);border:1px solid #30446f;border-radius:14px;padding:22px;margin-top:22px}
+    h1,h2,h3{margin-top:0}
+    .muted{color:#bfd0f0}
+    .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:18px}
+    .stat{background:rgba(255,255,255,.03);border:1px solid #30446f;border-radius:12px;padding:16px}
+    .stat-label{font-size:.85rem;color:#9ec5ff;margin-bottom:6px}
+    .stat-value{font-size:1.3rem;font-weight:700}
+    .section-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .task-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .task-card{background:#1a2546;border:1px solid #30446f;border-radius:14px;padding:18px}
+    .task-card h3{margin-bottom:8px;font-size:1.05rem}
+    .meta{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 12px}
+    .badge{display:inline-block;padding:4px 10px;border-radius:999px;font-weight:700;font-size:.84rem}
+    .source-jira{background:#9ec5ff;color:#10254e}
+    .source-gmail{background:#b7dfba;color:#0b5d1e}
+    .source-manual{background:#ead891;color:#6f4a00}
+    .priority-critical{background:#f4b3be;color:#7d1024}
+    .priority-high{background:#efbe8c;color:#6f3a00}
+    .priority-medium{background:#d2c5ff;color:#3c2470}
+    .status-new{background:#c2d7ff;color:#17396b}
+    .status-active{background:#b9dfb7;color:#226a1f}
+    .status-none{background:rgba(255,255,255,.08);color:#bfd0f0}
+    .next-step{color:#bfd0f0;margin:8px 0}
+    .linked{font-size:.92rem;color:#9ec5ff}
+    .empty{background:rgba(255,255,255,.03);border:1px dashed #30446f;border-radius:12px;padding:22px;color:#bfd0f0}
+    .all-tasks{display:grid;grid-template-columns:1fr;gap:14px}
+    .footer-note{margin-top:14px;color:#bfd0f0}
+    @media (max-width:960px){.section-grid,.task-grid,.stats{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
-  <h1>JC-OS Unified Dashboard</h1>
-  <p class='muted'>One view for Jira, Gmail action items, manual capture, and project execution.</p>
-  <div class='grid'>
-    <section class='panel'>
-      <h2>Today's Top 5</h2>
-      <div class='card'><h3>Review counsel email</h3><p><strong>Source:</strong> gmail | <strong>Priority:</strong> critical | <strong>Status:</strong> new</p><p><strong>Next:</strong> Summarize legal action items</p><p><strong>Linked:</strong> </p></div>
-<div class='card'><h3>Respond to Austin ISD email</h3><p><strong>Source:</strong> gmail | <strong>Priority:</strong> high | <strong>Status:</strong> new</p><p><strong>Next:</strong> Draft and send response</p><p><strong>Linked:</strong> </p></div>
-<div class='card'><h3>Ask coach about weekend arrival time.</h3><p><strong>Source:</strong> manual | <strong>Priority:</strong> medium | <strong>Status:</strong> new</p><p><strong>Next:</strong> Ask coach about weekend arrival time.</p><p><strong>Linked:</strong> </p></div>
-<div class='card'><h3>Add new legal timeline event from latest message batch.</h3><p><strong>Source:</strong> manual | <strong>Priority:</strong> medium | <strong>Status:</strong> new</p><p><strong>Next:</strong> Add new legal timeline event from latest message batch.</p><p><strong>Linked:</strong> </p></div>
-<div class='card'><h3>Validate Keyfactor renewal handling for edge-case certs</h3><p><strong>Source:</strong> jira | <strong>Priority:</strong> high | <strong>Status:</strong> active</p><p><strong>Next:</strong> Review and advance TM-2143</p><p><strong>Linked:</strong> TM-2143</p></div>
-    </section>
-    <section class='panel'>
-      <h2>Quick Wins</h2>
-      <div class='card'><h3>Review counsel email</h3><p><strong>Source:</strong> gmail | <strong>Priority:</strong> critical | <strong>Status:</strong> new</p><p><strong>Next:</strong> Summarize legal action items</p><p><strong>Linked:</strong> </p></div>
-<div class='card'><h3>Respond to Austin ISD email</h3><p><strong>Source:</strong> gmail | <strong>Priority:</strong> high | <strong>Status:</strong> new</p><p><strong>Next:</strong> Draft and send response</p><p><strong>Linked:</strong> </p></div>
-<div class='card'><h3>Ask coach about weekend arrival time.</h3><p><strong>Source:</strong> manual | <strong>Priority:</strong> medium | <strong>Status:</strong> new</p><p><strong>Next:</strong> Ask coach about weekend arrival time.</p><p><strong>Linked:</strong> </p></div>
-<div class='card'><h3>Add new legal timeline event from latest message batch.</h3><p><strong>Source:</strong> manual | <strong>Priority:</strong> medium | <strong>Status:</strong> new</p><p><strong>Next:</strong> Add new legal timeline event from latest message batch.</p><p><strong>Linked:</strong> </p></div>
-<div class='card'><h3>Validate Keyfactor renewal handling for edge-case certs</h3><p><strong>Source:</strong> jira | <strong>Priority:</strong> high | <strong>Status:</strong> active</p><p><strong>Next:</strong> Review and advance TM-2143</p><p><strong>Linked:</strong> TM-2143</p></div>
-    </section>
-    <section class='panel'>
-      <h2>Deep Work</h2>
-      <div class='card'><h3>Validate Keyfactor renewal handling for edge-case certs</h3><p><strong>Source:</strong> jira | <strong>Priority:</strong> high | <strong>Status:</strong> active</p><p><strong>Next:</strong> Review and advance TM-2143</p><p><strong>Linked:</strong> TM-2143</p></div>
-<div class='card'><h3>Refine Terraform module for Windows server provisioning</h3><p><strong>Source:</strong> jira | <strong>Priority:</strong> medium | <strong>Status:</strong> new</p><p><strong>Next:</strong> Review and advance TM-2190</p><p><strong>Linked:</strong> TM-2190</p></div>
-<div class='card'><h3>Need to create follow-up Jira ticket for Keyfactor edge case after validation.</h3><p><strong>Source:</strong> manual | <strong>Priority:</strong> medium | <strong>Status:</strong> new</p><p><strong>Next:</strong> Need to create follow-up Jira ticket for Keyfactor edge case after validation.</p><p><strong>Linked:</strong> </p></div>
-    </section>
-    <section class='panel'>
-      <h2>Blocked</h2>
-      <p>No items.</p>
-    </section>
-    <section class='panel'>
-      <h2>Waiting</h2>
-      <p>No items.</p>
-    </section>
-    <section class='panel'>
-      <h2>All Tasks</h2>
-      <div class='card'><h3>Review counsel email</h3><p><strong>Source:</strong> gmail | <strong>Priority:</strong> critical | <strong>Status:</strong> new</p><p><strong>Next:</strong> Summarize legal action items</p><p><strong>Linked:</strong> </p></div>
-<div class='card'><h3>Respond to Austin ISD email</h3><p><strong>Source:</strong> gmail | <strong>Priority:</strong> high | <strong>Status:</strong> new</p><p><strong>Next:</strong> Draft and send response</p><p><strong>Linked:</strong> </p></div>
-<div class='card'><h3>Ask coach about weekend arrival time.</h3><p><strong>Source:</strong> manual | <strong>Priority:</strong> medium | <strong>Status:</strong> new</p><p><strong>Next:</strong> Ask coach about weekend arrival time.</p><p><strong>Linked:</strong> </p></div>
-<div class='card'><h3>Add new legal timeline event from latest message batch.</h3><p><strong>Source:</strong> manual | <strong>Priority:</strong> medium | <strong>Status:</strong> new</p><p><strong>Next:</strong> Add new legal timeline event from latest message batch.</p><p><strong>Linked:</strong> </p></div>
-<div class='card'><h3>Validate Keyfactor renewal handling for edge-case certs</h3><p><strong>Source:</strong> jira | <strong>Priority:</strong> high | <strong>Status:</strong> active</p><p><strong>Next:</strong> Review and advance TM-2143</p><p><strong>Linked:</strong> TM-2143</p></div>
-<div class='card'><h3>Refine Terraform module for Windows server provisioning</h3><p><strong>Source:</strong> jira | <strong>Priority:</strong> medium | <strong>Status:</strong> new</p><p><strong>Next:</strong> Review and advance TM-2190</p><p><strong>Linked:</strong> TM-2190</p></div>
-<div class='card'><h3>Need to create follow-up Jira ticket for Keyfactor edge case after validation.</h3><p><strong>Source:</strong> manual | <strong>Priority:</strong> medium | <strong>Status:</strong> new</p><p><strong>Next:</strong> Need to create follow-up Jira ticket for Keyfactor edge case after validation.</p><p><strong>Linked:</strong> </p></div>
-    </section>
-  </div>
+  <header class='hero'>
+    <div class='container'>
+      <p class='eyebrow'>Daily Command Center</p>
+      <h1>JC-OS Unified Dashboard</h1>
+      <p class='lead'>One view for Jira, Gmail action items, manual capture, and project execution — restyled to match the darker, cleaner jcx2 presentation while keeping the same task content front and center.</p>
+      <nav class='nav'>
+        <a href='#top5'>Today's Top 5</a>
+        <a href='#quickwins'>Quick Wins</a>
+        <a href='#deepwork'>Deep Work</a>
+        <a href='#blocked'>Blocked</a>
+        <a href='#waiting'>Waiting</a>
+        <a href='#alltasks'>All Tasks</a>
+      </nav>
+      <div class='stats'>
+        <div class='stat'><div class='stat-label'>Total tasks</div><div class='stat-value'>7</div></div>
+        <div class='stat'><div class='stat-label'>Critical / high</div><div class='stat-value'>3</div></div>
+        <div class='stat'><div class='stat-label'>Active Jira</div><div class='stat-value'>2</div></div>
+        <div class='stat'><div class='stat-label'>Blocked / waiting</div><div class='stat-value'>0</div></div>
+      </div>
+    </div>
+  </header>
+
+  <main class='container layout'>
+    <div class='section-grid'>
+      <section class='panel' id='top5'>
+        <h2>Today's Top 5</h2>
+        <div class='task-grid'>
+          <article class='task-card'><h3>Review counsel email</h3><div class='meta'><span class='badge source-gmail'>gmail</span><span class='badge priority-critical'>critical</span><span class='badge status-new'>new</span></div><p class='next-step'><strong>Next:</strong> Summarize legal action items</p><p class='linked'><strong>Linked:</strong> none</p></article>
+          <article class='task-card'><h3>Respond to Austin ISD email</h3><div class='meta'><span class='badge source-gmail'>gmail</span><span class='badge priority-high'>high</span><span class='badge status-new'>new</span></div><p class='next-step'><strong>Next:</strong> Draft and send response</p><p class='linked'><strong>Linked:</strong> none</p></article>
+          <article class='task-card'><h3>Ask coach about weekend arrival time.</h3><div class='meta'><span class='badge source-manual'>manual</span><span class='badge priority-medium'>medium</span><span class='badge status-new'>new</span></div><p class='next-step'><strong>Next:</strong> Ask coach about weekend arrival time.</p><p class='linked'><strong>Linked:</strong> none</p></article>
+          <article class='task-card'><h3>Add new legal timeline event from latest message batch.</h3><div class='meta'><span class='badge source-manual'>manual</span><span class='badge priority-medium'>medium</span><span class='badge status-new'>new</span></div><p class='next-step'><strong>Next:</strong> Add new legal timeline event from latest message batch.</p><p class='linked'><strong>Linked:</strong> none</p></article>
+          <article class='task-card'><h3>Validate Keyfactor renewal handling for edge-case certs</h3><div class='meta'><span class='badge source-jira'>jira</span><span class='badge priority-high'>high</span><span class='badge status-active'>active</span></div><p class='next-step'><strong>Next:</strong> Review and advance TM-2143</p><p class='linked'><strong>Linked:</strong> TM-2143</p></article>
+        </div>
+      </section>
+
+      <section class='panel' id='quickwins'>
+        <h2>Quick Wins</h2>
+        <div class='task-grid'>
+          <article class='task-card'><h3>Review counsel email</h3><div class='meta'><span class='badge source-gmail'>gmail</span><span class='badge priority-critical'>critical</span><span class='badge status-new'>new</span></div><p class='next-step'><strong>Next:</strong> Summarize legal action items</p></article>
+          <article class='task-card'><h3>Respond to Austin ISD email</h3><div class='meta'><span class='badge source-gmail'>gmail</span><span class='badge priority-high'>high</span><span class='badge status-new'>new</span></div><p class='next-step'><strong>Next:</strong> Draft and send response</p></article>
+          <article class='task-card'><h3>Ask coach about weekend arrival time.</h3><div class='meta'><span class='badge source-manual'>manual</span><span class='badge priority-medium'>medium</span><span class='badge status-new'>new</span></div><p class='next-step'><strong>Next:</strong> Ask coach about weekend arrival time.</p></article>
+          <article class='task-card'><h3>Add new legal timeline event from latest message batch.</h3><div class='meta'><span class='badge source-manual'>manual</span><span class='badge priority-medium'>medium</span><span class='badge status-new'>new</span></div><p class='next-step'><strong>Next:</strong> Add new legal timeline event from latest message batch.</p></article>
+          <article class='task-card'><h3>Validate Keyfactor renewal handling for edge-case certs</h3><div class='meta'><span class='badge source-jira'>jira</span><span class='badge priority-high'>high</span><span class='badge status-active'>active</span></div><p class='next-step'><strong>Next:</strong> Review and advance TM-2143</p></article>
+        </div>
+      </section>
+
+      <section class='panel' id='deepwork'>
+        <h2>Deep Work</h2>
+        <div class='task-grid'>
+          <article class='task-card'><h3>Validate Keyfactor renewal handling for edge-case certs</h3><div class='meta'><span class='badge source-jira'>jira</span><span class='badge priority-high'>high</span><span class='badge status-active'>active</span></div><p class='next-step'><strong>Next:</strong> Review and advance TM-2143</p><p class='linked'><strong>Linked:</strong> TM-2143</p></article>
+          <article class='task-card'><h3>Refine Terraform module for Windows server provisioning</h3><div class='meta'><span class='badge source-jira'>jira</span><span class='badge priority-medium'>medium</span><span class='badge status-new'>new</span></div><p class='next-step'><strong>Next:</strong> Review and advance TM-2190</p><p class='linked'><strong>Linked:</strong> TM-2190</p></article>
+          <article class='task-card'><h3>Need to create follow-up Jira ticket for Keyfactor edge case after validation.</h3><div class='meta'><span class='badge source-manual'>manual</span><span class='badge priority-medium'>medium</span><span class='badge status-new'>new</span></div><p class='next-step'><strong>Next:</strong> Need to create follow-up Jira ticket for Keyfactor edge case after validation.</p></article>
+        </div>
+      </section>
+
+      <section class='panel' id='blocked'>
+        <h2>Blocked</h2>
+        <div class='empty'>No items.</div>
+      </section>
+
+      <section class='panel' id='waiting'>
+        <h2>Waiting</h2>
+        <div class='empty'>No items.</div>
+      </section>
+
+      <section class='panel' id='alltasks'>
+        <h2>All Tasks</h2>
+        <div class='all-tasks'>
+          <article class='task-card'><h3>Review counsel email</h3><div class='meta'><span class='badge source-gmail'>gmail</span><span class='badge priority-critical'>critical</span><span class='badge status-new'>new</span></div><p class='next-step'><strong>Next:</strong> Summarize legal action items</p><p class='linked'><strong>Linked:</strong> none</p></article>
+          <article class='task-card'><h3>Respond to Austin ISD email</h3><div class='meta'><span class='badge source-gmail'>gmail</span><span class='badge priority-high'>high</span><span class='badge status-new'>new</span></div><p class='next-step'><strong>Next:</strong> Draft and send response</p><p class='linked'><strong>Linked:</strong> none</p></article>
+          <article class='task-card'><h3>Ask coach about weekend arrival time.</h3><div class='meta'><span class='badge source-manual'>manual</span><span class='badge priority-medium'>medium</span><span class='badge status-new'>new</span></div><p class='next-step'><strong>Next:</strong> Ask coach about weekend arrival time.</p><p class='linked'><strong>Linked:</strong> none</p></article>
+          <article class='task-card'><h3>Add new legal timeline event from latest message batch.</h3><div class='meta'><span class='badge source-manual'>manual</span><span class='badge priority-medium'>medium</span><span class='badge status-new'>new</span></div><p class='next-step'><strong>Next:</strong> Add new legal timeline event from latest message batch.</p><p class='linked'><strong>Linked:</strong> none</p></article>
+          <article class='task-card'><h3>Validate Keyfactor renewal handling for edge-case certs</h3><div class='meta'><span class='badge source-jira'>jira</span><span class='badge priority-high'>high</span><span class='badge status-active'>active</span></div><p class='next-step'><strong>Next:</strong> Review and advance TM-2143</p><p class='linked'><strong>Linked:</strong> TM-2143</p></article>
+          <article class='task-card'><h3>Refine Terraform module for Windows server provisioning</h3><div class='meta'><span class='badge source-jira'>jira</span><span class='badge priority-medium'>medium</span><span class='badge status-new'>new</span></div><p class='next-step'><strong>Next:</strong> Review and advance TM-2190</p><p class='linked'><strong>Linked:</strong> TM-2190</p></article>
+          <article class='task-card'><h3>Need to create follow-up Jira ticket for Keyfactor edge case after validation.</h3><div class='meta'><span class='badge source-manual'>manual</span><span class='badge priority-medium'>medium</span><span class='badge status-new'>new</span></div><p class='next-step'><strong>Next:</strong> Need to create follow-up Jira ticket for Keyfactor edge case after validation.</p><p class='linked'><strong>Linked:</strong> none</p></article>
+        </div>
+        <p class='footer-note'>Restyled to match the darker jcx2 presentation while preserving the same task data and section breakdown from the existing JC-OS dashboard.</p>
+      </section>
+    </div>
+  </main>
 </body>
 </html>
